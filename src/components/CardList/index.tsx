@@ -1,12 +1,11 @@
+import Card from '@/components/Card';
 import appService from '@/services/app';
 
-import { ChevronRight } from 'lucide-react';
-import { CardList as List, Card, ImageWrapper, Overlay } from './index.styled';
+import { CardList as List } from './index.styled';
 import { useQuery } from 'react-query';
 
-
 const CardList = () => {
-  const { data: appList , isLoading } = useQuery({
+  const { data: appList } = useQuery({
     queryKey: ['card-list'],
     queryFn: appService.getAll,
   });
@@ -16,22 +15,7 @@ const CardList = () => {
       {!appList ? (
         <>Loading..</>
       ) : (
-        appList.map(({ app_id, name, icon }) => (
-          <Card key={app_id}>
-            <ImageWrapper>
-              <img src={icon} alt={`${name} application`} />
-            </ImageWrapper>
-            <span>{name}</span>
-            <Overlay>
-              <p>
-                EXPLORAR
-                <span>
-                  <ChevronRight size={20} color={'#0ea7ff'} strokeWidth={3} />
-                </span>
-              </p>
-            </Overlay>
-          </Card>
-        ))
+        appList.map((app) => <Card key={app.app_id} {...app} />)
       )}
     </List>
   );

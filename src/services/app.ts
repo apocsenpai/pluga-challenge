@@ -1,6 +1,6 @@
 import api from '@/services/api';
 
-interface IApp {
+export interface IApp {
   app_id: string;
   name: string;
   color: string;
