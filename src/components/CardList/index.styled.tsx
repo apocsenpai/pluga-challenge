@@ -35,6 +35,7 @@ const slide = keyframes`
 export const CardList = styled.ul`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 11.125rem;
   gap: 3rem 1.5rem;
   padding: 2rem;
 `;
@@ -44,17 +45,22 @@ export const Card = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 2rem;
   padding: 1rem;
   border-radius: 0.25rem;
   box-shadow: rgba(66, 113, 151, 0.09) 0 0 0 0.0625rem;
   cursor: pointer;
+  background-color: #dddddd;
+  text-align: center;
 
   & > span {
+
     position: relative;
     z-index: 1;
     font-weight: 700;
-    color: #9e9e9e;
+    line-height: 1.125rem;
+    color: #6e6e6e;
   }
 `;
 
@@ -67,7 +73,6 @@ export const ImageWrapper = styled.div`
   border-radius: 50%;
   padding: 0.5rem;
   overflow: hidden;
-  background-color: red;
 
   img {
     width: 100%;
@@ -102,7 +107,7 @@ export const Overlay = styled.div`
   }
 
   &:hover {
-    background-color: #eef7fc99;
+    background-color: #eef7fcaa;
 
     p {
       display: flex;
