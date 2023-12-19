@@ -3,7 +3,7 @@ import { Input, InputBox } from "./index.styled";
 import { useState } from "react";
 
 const Header = () => {
-  const [focused, setFocused] = useState(false);
+  const [focused, setFocused] = useState<boolean>(false);
 
   return (
     <header>
