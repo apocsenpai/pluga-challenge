@@ -1,4 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
+import fonts from 'google-fonts';
+
+fonts.add({
+  Raleway: ['700', '500', '300'],
+});
 
 export const GlobalStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
@@ -21,6 +26,8 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
     box-sizing: border-box;
+	font-family: 'Raleway';
+	font-weight: 500;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -45,5 +52,4 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 `;
