@@ -29,14 +29,6 @@ export const Card = styled.li<ICard>`
   background-color: #dddddd;
   text-align: center;
 
-  & > span {
-    position: relative;
-    z-index: 1;
-    font-weight: 700;
-    line-height: 1.125rem;
-    color: #6e6e6e;
-  }
-
   &:hover div:nth-child(3) {
     ${cardHover}
   }

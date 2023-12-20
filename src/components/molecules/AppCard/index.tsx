@@ -1,5 +1,5 @@
 import { useToggle } from '@/app/hooks';
-import { ImageWrapper } from '@/components/atoms';
+import { ImageWrapper, Title } from '@/components/atoms';
 import { Overlay } from '@/components/molecules';
 import { AppModal } from '@/components/organisms';
 import { IApp } from '@/services/app';
@@ -21,7 +21,7 @@ export const AppCard = ({ background = false, ...props }: IAppCard) => {
         <ImageWrapper width={'6rem'} height={'6rem'}>
           <img src={icon} alt={`${name} application`} />
         </ImageWrapper>
-        <span>{name}</span>
+        <Title>{name}</Title>
         <Overlay />
       </Card>
       {isActive && <AppModal turnOffElement={turnOffElement} {...props} />}
