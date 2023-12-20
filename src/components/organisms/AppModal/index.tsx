@@ -10,7 +10,7 @@ interface IAppModal extends IApp {
 export const AppModal = ({ turnOffElement, ...props }: IAppModal) => (
   <Container>
     <ShadowScreen onClick={turnOffElement} />
-    <Modal background={props.color}>
+    <Modal>
       <AppAccess {...props} />
       <PreviousApps/>
     </Modal>

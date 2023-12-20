@@ -8,7 +8,7 @@ export const Wrapper = styled.div<IImageWrapper>`
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  padding: 0.5rem;
+  padding: 1rem;
   overflow: hidden;
 
   img {

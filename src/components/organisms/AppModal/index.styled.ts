@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-interface IModal {
-  background: string;
-}
-
 export const Container = styled.div`
   display: flex;
   align-items: center;
@@ -22,7 +18,7 @@ export const ShadowScreen = styled.div`
   background-color: #00000088;
 `;
 
-export const Modal = styled.main<IModal>`
+export const Modal = styled.main`
   width: min(75%, 45rem);
   display: flex;
   flex-direction: column;
@@ -31,7 +27,7 @@ export const Modal = styled.main<IModal>`
   border: 0.0625rem solid transparent;
   border-radius: 1rem;
   position: absolute;
-  background-color: ${({  background }) =>  background};
+  background-color: #ffffff;
 `;
 
 export const AppContent = styled.div`

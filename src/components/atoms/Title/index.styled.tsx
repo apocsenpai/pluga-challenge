@@ -10,6 +10,5 @@ export const CustomTitle = styled.p<ITitle>`
     ${({ maxSize }) => maxSize}
   );
   font-weight: 700;
-  line-height: 1.125rem;
   color: ${({ color }) => color};
 `;
