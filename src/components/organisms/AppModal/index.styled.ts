@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface IModal {
+  background: string;
+}
+
 export const Container = styled.div`
   display: flex;
   align-items: center;
@@ -18,21 +22,20 @@ export const ShadowScreen = styled.div`
   background-color: #00000088;
 `;
 
-export const Modal = styled.main`
+export const Modal = styled.main<IModal>`
   width: min(75%, 45rem);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
   border: 0.0625rem solid transparent;
-  padding: 3rem 2rem 1rem;
-  border-radius: 0.25rem;
+  border-radius: 1rem;
   position: absolute;
-  background-color: white;
+  background-color: ${({  background }) =>  background};
 `;
 
 export const AppContent = styled.div`
   display: flex;
   align-items: center;
   gap: 2rem;
-`
+`;

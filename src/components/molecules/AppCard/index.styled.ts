@@ -26,7 +26,7 @@ export const Card = styled.li<ICard>`
   border-radius: 0.25rem;
   box-shadow: rgba(66, 113, 151, 0.09) 0 0 0 0.0625rem;
   cursor: pointer;
-  background-color: #dddddd;
+  background-color: ${({background}) => background ? "#dddddd" : "transparent"};
   text-align: center;
 
   &:hover div:nth-child(3) {

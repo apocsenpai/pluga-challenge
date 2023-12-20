@@ -21,7 +21,7 @@ export const AppCard = ({ background = false, ...props }: IAppCard) => {
         <ImageWrapper width={'6rem'} height={'6rem'}>
           <img src={icon} alt={`${name} application`} />
         </ImageWrapper>
-        <Title>{name}</Title>
+        <Title maxSize='1rem' minSize='0.75rem'>{name}</Title>
         <Overlay />
       </Card>
       {isActive && <AppModal turnOffElement={turnOffElement} {...props} />}
