@@ -9,3 +9,11 @@ export const Footer = styled.footer`
   gap: 2rem;
   background: #ffffff;
 `;
+
+export const PreviousGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  width: 100%;
+`;

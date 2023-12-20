@@ -1,18 +1,22 @@
-import { AppContext } from '@/app/providers/appProvider';
+import { usePreviousApp } from '@/app/hooks';
 import { Title } from '@/components/atoms';
 import { AppCard } from '@/components/molecules';
-import { useContext } from 'react';
-import { Footer } from './index.styled';
+
+import { Footer, PreviousGrid } from './index.styled';
 
 export const PreviousApps = () => {
-  const { appList } = useContext(AppContext);
+  const { getPreviousApp } = usePreviousApp();
 
   return (
     <Footer>
       <Title minSize="0.75rem" maxSize="1.25rem">
         ÚLTIMAS FERRAMENTAS VISUALIZADAS
       </Title>
-      <AppCard {...appList[0]} />
+      <PreviousGrid>
+        {getPreviousApp().map((item) => (
+          <AppCard key={item.app_id} {...item} background />
+        ))}
+      </PreviousGrid>
     </Footer>
   );
 };
