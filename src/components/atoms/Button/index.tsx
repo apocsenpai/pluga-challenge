@@ -2,7 +2,7 @@ import { AnchorHTMLAttributes } from 'react';
 import { CustomButton } from './index.styled';
 
 export interface IButton extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  background: string;
+  background?: string;
 }
 
 export const Button = ({

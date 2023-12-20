@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { IButton } from '.';
 
-export const CustomButton = styled.a<IButton>`
+export const CustomButton = styled.button<IButton>`
   border: 0.0625rem solid transparent;
   border-radius: 2rem;
   padding: 1rem;

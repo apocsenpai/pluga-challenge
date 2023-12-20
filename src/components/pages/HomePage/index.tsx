@@ -1,5 +1,5 @@
 import { AppContext } from '@/app/providers/appProvider';
-import { CardList, Header } from '@/components/organisms';
+import { CardList, Footer, Header } from '@/components/organisms';
 
 import { Container, Content } from './index.styled';
 import { useContext } from 'react';
@@ -12,6 +12,7 @@ export const HomePage = () => {
       <Content>
         <Header />
         <CardList appList={appList} />
+        <Footer />
       </Content>
     </Container>
   );
