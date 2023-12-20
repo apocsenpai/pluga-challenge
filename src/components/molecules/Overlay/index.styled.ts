@@ -31,46 +31,7 @@ const slide = keyframes`
     }
 `;
 
-export const Card = styled.li`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  box-shadow: rgba(66, 113, 151, 0.09) 0 0 0 0.0625rem;
-  cursor: pointer;
-  background-color: #dddddd;
-  text-align: center;
-
-  & > span {
-    position: relative;
-    z-index: 1;
-    font-weight: 700;
-    line-height: 1.125rem;
-    color: #6e6e6e;
-  }
-`;
-
-export const ImageWrapper = styled.div`
-  width: 6rem;
-  height: 6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  padding: 0.5rem;
-  overflow: hidden;
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-`;
-
-export const Overlay = styled.div`
+export const Container = styled.div`
   padding: 1rem;
   position: absolute;
   top: 0;
@@ -86,24 +47,13 @@ export const Overlay = styled.div`
     position: relative;
     margin-top: 2.25rem;
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: clamp(0.75rem, 0.6111rem + 0.7407vw, 1.5rem);
     animation: ${pulse} 0.5s linear forwards;
     color: #0ea7ff;
 
     span {
       height: 1.25rem;
       animation: ${slide} 1s ease-in-out infinite;
-    }
-  }
-
-  &:hover {
-    background-color: #eef7fcaa;
-
-    p {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.125rem;
     }
   }
 `;

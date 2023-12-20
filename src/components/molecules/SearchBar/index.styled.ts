@@ -1,10 +1,7 @@
+import { IInput } from '@/components/atoms/Input';
 import styled from 'styled-components';
 
-interface IInputBox {
-  focused: boolean;
-}
-
-export const InputBox = styled.label<IInputBox>`
+export const InputBox = styled.label<IInput>`
   display: flex;
   padding: 1rem;
   gap: 1rem;
@@ -23,17 +20,5 @@ export const InputBox = styled.label<IInputBox>`
     input::placeholder {
       color: #0ea7ff;
     }
-  }
-`;
-
-export const Input = styled.input<IInputBox>`
-  width: 100%;
-  font-size: 1rem;
-  color: #333333;
-  outline: none;
-  border: none;
-
-  &::placeholder {
-    color: ${({ focused }) => (focused ? '#0ea7ff' : '#a8b8c0')};
   }
 `;
