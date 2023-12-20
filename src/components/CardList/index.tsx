@@ -1,14 +1,12 @@
 import Card from '@/components/Card';
-import appService from '@/services/app';
 
 import { CardList as List } from './index.styled';
-import { useQuery } from 'react-query';
+
+import { useContext } from 'react';
+import { AppContext } from '@/app/providers/appProvider';
 
 const CardList = () => {
-  const { data: appList } = useQuery({
-    queryKey: ['card-list'],
-    queryFn: appService.getAll,
-  });
+  const { appList } = useContext(AppContext)
 
   return (
     <List>
