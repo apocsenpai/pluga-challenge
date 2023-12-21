@@ -1,7 +1,10 @@
 import { render } from '@testing-library/react';
 
 import { Button } from '..';
-import { BACKGROUND, DEFAULT_BACKGROUND, TEXT_MOCK } from './mocks';
+
+export const TEXT_MOCK = 'Text';
+export const BACKGROUND = '#000';
+export const DEFAULT_BACKGROUND = '#0ea7ff';
 
 describe('<Button>', () => {
   it('should render button', () => {

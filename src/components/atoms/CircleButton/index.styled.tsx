@@ -18,12 +18,12 @@ export const Button = styled.button<ICircleButton>`
   border-radius: 100%;
   color: #0ea7ff;
 
-  ${({ active }) => (active ? activeButton : inactiveButton)};
+  ${({ $active }) => ($active ? activeButton : inactiveButton)};
   cursor: pointer;
   transition: 150ms linear;
 
   &:hover {
-    ${({ hasHover }) => hasHover && activeButton}
+    ${({ $hasHover }) => $hasHover && activeButton}
 
     opacity: 0.85;
   }
