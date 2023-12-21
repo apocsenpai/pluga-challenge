@@ -1,0 +1,16 @@
+on:
+  push:
+    branches:
+      - main
+name: Build and Deploy on AWS
+jobs:
+  build:
+    runs-on: self-hosted
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run docker compose down and delete volumes
+        run: docker compose down -v
+      - name: Run docker compose up
+        run: docker compose up --build -d
