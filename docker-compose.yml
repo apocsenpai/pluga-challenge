@@ -1,0 +1,19 @@
+services:
+  vite_app:
+    container_name: vite_app
+    build: .
+    volumes:
+      - vite_app-volume:/var/www/html
+
+  nginx:
+    container_name: nginx_app
+    build: ./nginx
+    ports:
+      - 8080:80
+    volumes:
+      - vite_app-volume:/var/www/html
+    depends_on:
+      - vite_app
+
+volumes:
+  vite_app-volume:
