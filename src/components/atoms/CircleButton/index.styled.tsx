@@ -1,5 +1,14 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { ICircleButton } from '.';
+
+const activeButton = css`
+  background-color: #0ea7ff;
+  color: #ffffff;
+`;
+const inactiveButton = css`
+  background-color: #ffffff;
+  color: #0ea7ff;
+`;
 
 export const Button = styled.button<ICircleButton>`
   height: 2rem;
@@ -8,15 +17,13 @@ export const Button = styled.button<ICircleButton>`
   border: 0.0625rem solid transparent;
   border-radius: 100%;
   color: #0ea7ff;
-  background-color: ${({ background }) => background};
+
+  ${({ active }) => (active ? activeButton : inactiveButton)};
   cursor: pointer;
   transition: 150ms linear;
 
   &:hover {
-    ${({ hasHover }) =>
-      hasHover &&
-      `background-color: #0ea7ff;
-    color: #ffffff;`}
+    ${({ hasHover }) => hasHover && activeButton}
 
     opacity: 0.85;
   }

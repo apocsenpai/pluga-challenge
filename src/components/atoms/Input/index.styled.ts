@@ -3,7 +3,7 @@ import { IInput } from '.';
 
 export const Input = styled.input<IInput>`
   width: 100%;
-  font-size: 1rem;
+  font-size: clamp(0.75rem, 0.6991rem + 0.2508vw, 1rem);
   color: #333333;
   outline: none;
   border: none;

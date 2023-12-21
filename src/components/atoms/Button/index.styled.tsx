@@ -5,14 +5,17 @@ export const CustomButton = styled.button<IButton>`
   border: 0.0625rem solid transparent;
   border-radius: 2rem;
   padding: 1rem;
-  font-weight: 700;
-  font-size: 1rem;
-  color: #ffffff;
   cursor: pointer;
   background-color: ${({ background }) => background};
   transition: 200ms ease-out;
   text-align: center;
-  text-decoration: none;
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1rem;
+  }
 
   &:hover {
     opacity: 0.9;

@@ -1,23 +1,28 @@
-import { AppContext } from '@/app/providers/appProvider';
-import { createPageIndexList } from '@/utils/helpers';
-
-import { useContext } from 'react';
-
-import { List } from './index.styled';
 import { CircleButton } from '@/components/atoms';
 
-export const IndexList = () => {
-  const { baseAppList } = useContext(AppContext);
+import { List } from './index.styled';
+
+export interface IIndexList {
+  currentPage: number;
+  goToPage: (index: number) => void;
+  indexList: number[];
+}
+
+export const IndexList = ({ currentPage, goToPage, indexList }: IIndexList) => {
 
   return (
-    baseAppList && (
-      <List>
-        {createPageIndexList(baseAppList?.length).map((item) => (
-          <li key={item}>
-            <CircleButton hasHover>{item}</CircleButton>
-          </li>
-        ))}
-      </List>
-    )
+    <List>
+      {indexList.map((item) => (
+        <li key={item}>
+          <CircleButton
+            onClick={() => goToPage(item)}
+            active={currentPage === item}
+            hasHover
+          >
+            {item}
+          </CircleButton>
+        </li>
+      ))}
+    </List>
   );
 };

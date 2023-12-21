@@ -1,4 +1,5 @@
 import appService, { IApp } from '@/services/app';
+import { getAppListByPage } from '@/utils/helpers';
 
 import React, { useEffect, useMemo, useState } from 'react';
 import { useQuery } from 'react-query';
@@ -24,10 +25,13 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const [appList, setAppList] = useState(baseAppList);
 
   useEffect(() => {
-    if (baseAppList) setAppList(baseAppList);
+    if (baseAppList) setAppList(getAppListByPage(1, baseAppList));
   }, [baseAppList]);
 
-  const contextValue = useMemo(() => ({ baseAppList, appList, setAppList }), [ baseAppList, appList, setAppList]);
+  const contextValue = useMemo(
+    () => ({ baseAppList, appList, setAppList }),
+    [baseAppList, appList, setAppList],
+  );
 
   return (
     <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>

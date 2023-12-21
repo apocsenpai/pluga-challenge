@@ -1,7 +1,7 @@
 import { AppCard } from '@/components/molecules';
+import { IApp } from '@/services/app';
 
 import { CardList as List } from './index.styled';
-import { IApp } from '@/services/app';
 
 interface ICardList {
   appList: IApp[] | undefined;
