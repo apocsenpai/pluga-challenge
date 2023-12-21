@@ -5,10 +5,10 @@ export const CustomTitle = styled.p<ITitle>`
   position: relative;
   z-index: 1;
   font-size: clamp(
-    ${({ minSize }) => minSize},
+    ${({ $minSize }) => $minSize},
     0.9953rem + 1.2539vw,
-    ${({ maxSize }) => maxSize}
+    ${({ $maxSize }) => $maxSize}
   );
   font-weight: 700;
-  color: ${({ color }) => color};
+  color: ${({ $color }) => $color};
 `;

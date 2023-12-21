@@ -9,7 +9,7 @@ export const PreviousApps = () => {
 
   return (
     <Footer>
-      <Title minSize="0.75rem" maxSize="1.25rem">
+      <Title $minSize="0.75rem" $maxSize="1.25rem">
         ÚLTIMAS FERRAMENTAS VISUALIZADAS
       </Title>
       <PreviousGrid>
