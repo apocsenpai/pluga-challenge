@@ -9,7 +9,7 @@ services:
     container_name: nginx_app
     build: ./nginx
     ports:
-      - 8080:80
+      - 80:80
     volumes:
       - vite_app-volume:/var/www/html
     depends_on:
