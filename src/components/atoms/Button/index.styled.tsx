@@ -9,13 +9,10 @@ export const CustomButton = styled.button<IButton>`
   background-color: ${({ background }) => background};
   transition: 200ms ease-out;
   text-align: center;
-
-  a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 1rem;
-  }
+  width: 100%;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
 
   &:hover {
     opacity: 0.9;
