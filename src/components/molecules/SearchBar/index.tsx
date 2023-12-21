@@ -14,14 +14,14 @@ export const SearchBar = () => {
   });
 
   return (
-    <InputBox htmlFor="search" onClick={turnFocusOn} focused={focused}>
+    <InputBox htmlFor="search" onClick={turnFocusOn} $focused={focused}>
       <Icon icon={Search} color={focused ? '#0ea7ff' : '#a8b8c0'} />
       <Input
         placeholder="BUSCAR FERRAMENTA"
         id="search"
         onBlur={turnFocusOff}
         onChange={delayedSearchBarChange}
-        focused={focused}
+        $focused={focused}
       />
     </InputBox>
   );

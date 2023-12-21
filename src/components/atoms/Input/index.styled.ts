@@ -9,6 +9,6 @@ export const Input = styled.input<IInput>`
   border: none;
 
   &::placeholder {
-    color: ${({ focused }) => (focused ? '#0ea7ff' : '#a8b8c0')};
+    color: ${({ $focused }) => ($focused ? '#0ea7ff' : '#a8b8c0')};
   }
 `;

@@ -14,9 +14,9 @@ export const AppAccess = ({ color, icon, link, name }: IApp) => {
       </Background>
       <InfoWrapper>
         <Title>{name}</Title>
-        <Button background={color}>
-          <Link to={link}>ACESSAR</Link>
-        </Button>
+        <Link to={link}>
+          <Button background={color}>ACESSAR</Button>
+        </Link>
       </InfoWrapper>
     </Container>
   );

@@ -7,7 +7,7 @@ export const InputBox = styled.label<IInput>`
   gap: 1rem;
   border-radius: 0.25rem;
   border: 0.0625rem solid;
-  border-color: ${({ focused }) => (focused ? '#0ea7ff' : '#a8b8c0')};
+  border-color: ${({ $focused }) => ($focused ? '#0ea7ff' : '#a8b8c0')};
   cursor: pointer;
 
   &:hover {
