@@ -8,10 +8,10 @@ interface IUseDebounce {
 export const useDebounce = ({ fn, delay }: IUseDebounce) => {
   const timeoutRef = useRef(0);
 
-  const delayedFunction = (...args) => {
+  const delayedFunction = (...args: ChangeEvent<HTMLInputElement>[]) => {
     clearTimeout(timeoutRef?.current);
     timeoutRef.current = setTimeout(() => {
-      fn(...args);
+      fn(args[0]);
     }, delay);
   };
 

@@ -1,5 +1,5 @@
 import { AppContext } from '@/app/providers/appProvider';
-import { filterAppListBySearchValue } from '@/utils/helpers';
+import { filterAppListBySearchValue, getAppListByPage } from '@/utils/helpers';
 import { ChangeEvent, useContext } from 'react';
 
 export const useSearch = () => {
@@ -8,7 +8,7 @@ export const useSearch = () => {
   const handleSearchBarChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
 
-    if (!value) return setAppList(baseAppList);
+    if (!value && baseAppList) return setAppList(getAppListByPage(1, baseAppList));
 
     if (baseAppList) setAppList(filterAppListBySearchValue(value, baseAppList));
   };

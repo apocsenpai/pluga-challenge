@@ -28,6 +28,14 @@ export const Modal = styled.main`
   border-radius: 1rem;
   position: absolute;
   background-color: #ffffff;
+
+  @media (max-width: 580px) {
+    padding: 3rem 1rem 1rem;
+    gap: 1rem;
+    flex-direction: column;
+    height: 90vh;
+    overflow: hidden;
+  }
 `;
 
 export const AppContent = styled.div`

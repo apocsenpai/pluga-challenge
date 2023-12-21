@@ -11,6 +11,15 @@ export const Container = styled.div`
   align-items: center;
   justify-items: center;
   padding: 3rem 8rem 0;
+
+  @media (max-width: 768px) {
+    padding: 3rem 4rem 0;
+  }
+  @media (max-width: 580px) {
+    padding: 3rem 2rem 0;
+    gap: 1rem;
+    flex-direction: column;
+  }
 `;
 
 export const Background = styled.div<IBackground>`
@@ -26,4 +35,9 @@ export const InfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  @media (max-width: 580px) {
+    align-items: center;
+    gap: 1rem;
+  }
 `;

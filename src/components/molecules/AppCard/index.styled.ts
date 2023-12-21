@@ -23,14 +23,15 @@ export const Card = styled.li<ICard>`
   justify-content: space-between;
   gap: 2rem;
   padding: 1rem;
+  border: 0.0625rem solid transparent;
   border-radius: 0.25rem;
   box-shadow: rgba(66, 113, 151, 0.09) 0 0 0 0.0625rem;
   cursor: pointer;
-  background-color: ${({background}) => background ? "#dddddd" : "transparent"};
+  background-color: ${({ background }) =>
+    background ? '#dddddd' : 'transparent'};
   text-align: center;
 
   &:hover div:nth-child(3) {
     ${cardHover}
   }
 `;
-

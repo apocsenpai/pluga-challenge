@@ -1,7 +1,8 @@
 import { AppContext } from '@/app/providers/appProvider';
+import { IApp } from '@/services/app';
 import { getAppListByPage } from '@/utils/helpers';
 
-import { useContext, useState } from 'react';
+import { Dispatch, useContext, useState } from 'react';
 
 export const usePagination = (defaultPage: number) => {
   const [currentPage, setCurrentPage] = useState(defaultPage);
@@ -13,8 +14,8 @@ export const usePagination = (defaultPage: number) => {
 
     const newPage = currentPage + 1;
 
-    setCurrentPage(newPage);
-    setAppList(getAppListByPage(newPage, baseAppList));
+    if (baseAppList)
+      handlePageChange(setCurrentPage, newPage, setAppList, baseAppList);
   };
 
   const backPage = () => {
@@ -22,13 +23,13 @@ export const usePagination = (defaultPage: number) => {
 
     const newPage = currentPage - 1;
 
-    setCurrentPage(newPage);
-    setAppList(getAppListByPage(newPage, baseAppList));
+    if (baseAppList)
+      handlePageChange(setCurrentPage, newPage, setAppList, baseAppList);
   };
 
   const goToPage = (index: number) => {
-    setCurrentPage(index);
-    setAppList(getAppListByPage(index, baseAppList));
+    if (baseAppList)
+      handlePageChange(setCurrentPage, index, setAppList, baseAppList);
   };
 
   return {
@@ -38,3 +39,13 @@ export const usePagination = (defaultPage: number) => {
     goToPage,
   };
 };
+
+function handlePageChange(
+  changePageTo: Dispatch<React.SetStateAction<number>>,
+  newPage: number,
+  setNewList: Dispatch<React.SetStateAction<IApp[] | undefined>>,
+  appList: IApp[],
+) {
+  changePageTo(newPage);
+  setNewList(getAppListByPage(newPage, appList));
+}
