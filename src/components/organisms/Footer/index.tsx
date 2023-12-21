@@ -14,13 +14,12 @@ export const Footer = () => {
 
   const { currentPage, advancePage, backPage, goToPage } = usePagination(1);
 
-
   const indexList = baseAppList && createPageIndexList(baseAppList?.length);
 
   return (
     indexList && (
       <Pagination>
-        <CircleButton onClick={backPage} background={'#ffffff'}>
+        <CircleButton onClick={backPage}>
           <Icon
             icon={ChevronLeft}
             size={16}
@@ -33,10 +32,7 @@ export const Footer = () => {
           currentPage={currentPage}
           indexList={indexList}
         />
-        <CircleButton
-          onClick={() => advancePage(indexList.length)}
-          background={'#ffffff'}
-        >
+        <CircleButton onClick={() => advancePage(indexList.length)}>
           <Icon
             icon={ChevronRight}
             size={16}

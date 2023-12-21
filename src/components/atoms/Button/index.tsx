@@ -1,7 +1,7 @@
-import { AnchorHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes } from 'react';
 import { CustomButton } from './index.styled';
 
-export interface IButton extends AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   background?: string;
 }
 

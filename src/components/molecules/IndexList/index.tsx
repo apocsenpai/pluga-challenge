@@ -16,8 +16,8 @@ export const IndexList = ({ currentPage, goToPage, indexList }: IIndexList) => {
         <li key={item}>
           <CircleButton
             onClick={() => goToPage(item)}
-            active={currentPage === item}
-            hasHover
+            $active={currentPage === item}
+            $hasHover
           >
             {item}
           </CircleButton>
