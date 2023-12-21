@@ -21,7 +21,8 @@
   <a href="#contact-me">Contact me</a>
 </p>
 
-#### Image pages
+[Pluga _ Integrações para automatizar o seu negócio.webm](https://github.com/apocsenpai/pluga-challenge/assets/87510640/504ca4c8-2688-431e-a06f-42c14a564fdb)
+
 
 ## About
 
