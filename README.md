@@ -12,7 +12,6 @@
   </a>
 </p>
 
-
 <p align="center">
   <a href="#about">About</a> •
   <a href="#stacks">Stacks</a> •
@@ -21,8 +20,7 @@
   <a href="#contact-me">Contact me</a>
 </p>
 
-[Pluga _ Integrações para automatizar o seu negócio.webm](https://github.com/apocsenpai/pluga-challenge/assets/87510640/504ca4c8-2688-431e-a06f-42c14a564fdb)
-
+[Pluga \_ Integrações para automatizar o seu negócio.webm](https://github.com/apocsenpai/pluga-challenge/assets/87510640/504ca4c8-2688-431e-a06f-42c14a564fdb)
 
 ## About
 
@@ -51,12 +49,28 @@ $ npm i
 # start app
 $ npm run dev
 ```
+
+Or if you had [Docker engine](https://docs.docker.com/engine/install/) installed, try:
+
+```bash
+# Clone this repository
+$ git clone git@github.com:apocsenpai/pluga-challenge.git
+
+# Go into the directory
+$ cd pluga-challenge
+
+# Run docker compose in omnichannel-bm-test directory
+$ docker compose -f docker-compose.dev.yml up --build -d
+
+# access http://localhost:8080
+```
+
 ## License
 
 [Mozilla Public License 2.0](https://github.com/apocsenpai/pluga-challenge/blob/main/LICENSE)
 
-
 ### Contact me
+
 > GitHub [@apocsenpai](https://github.com/apocsenpai) &nbsp;&middot;&nbsp;
 > Email [sennasjonatas@gmail.com](mailto:sennasjonatas@gmail.com) &nbsp;&middot;&nbsp;
 > Linkedin [Jonatas Sennas](https://www.linkedin.com/in/jonatassennas/)
