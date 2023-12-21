@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href=""><img src="https://yt3.googleusercontent.com/F2CQ9LI4alpzI8_WzmqUwigbL24iW7mCOyKvCp8ZK1KQmdFxPk0nDe7GhGiKQfMn6MTI5yBMMfY=s900-c-k-c0x00ffffff-no-rj" alt="Pluga icon" width="200"/></a>
+  <a href="http://ec2-54-235-54-51.compute-1.amazonaws.com/"><img src="https://yt3.googleusercontent.com/F2CQ9LI4alpzI8_WzmqUwigbL24iW7mCOyKvCp8ZK1KQmdFxPk0nDe7GhGiKQfMn6MTI5yBMMfY=s900-c-k-c0x00ffffff-no-rj" alt="Pluga icon" width="200"/></a>
   <br>
     Pluga - technical test
   <br>
@@ -26,7 +26,7 @@
 
 This app is a technical test carried out for a junior javascript developer at [Pluga](https://pluga.co/). This technical test consists of a list of cards representing the apps integrated into Pluga.
 
-The deploy link is available soon.
+The deploy link is available [here](http://ec2-54-235-54-51.compute-1.amazonaws.com/).
 
 ## Stacks
 
