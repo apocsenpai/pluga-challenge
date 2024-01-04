@@ -7,7 +7,7 @@ export const useSearch = () => {
 
   const handleSearchBarChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-
+    console.log(value)
     if (!value && baseAppList) return setAppList(getAppListByPage(1, baseAppList));
 
     if (baseAppList) setAppList(filterAppListBySearchValue(value, baseAppList));

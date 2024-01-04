@@ -6,12 +6,11 @@ interface IUseDebounce {
 }
 
 export const useDebounce = ({ fn, delay }: IUseDebounce) => {
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const timeoutRef = useRef<NodeJS.Timeout>(setTimeout(() => 'initial', 0));
 
   const delayedFunction = (...args: ChangeEvent<HTMLInputElement>[]) => {
-    if (!timeoutRef?.current) return;
-
     clearTimeout(timeoutRef?.current);
+
     timeoutRef.current = setTimeout(() => {
       fn(args[0]);
     }, delay);
